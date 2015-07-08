@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+  .box-mapa{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    overflow: scroll;
+    white-space: nowrap;
+  }
+  .mapa{
+    position: relative;
+
+    background: url('v3/Mapa4mil.png') no-repeat top left;
+    width: 4000px;
+    height: 2213px;
+  }
+
+  .pins{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+  }
+
+  img, canvas{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+
+  }
+
+  canvas{
+    z-index: 2;
+  }
+
+  #rota_mapa{
+    opacity: 0;
+  }
+
+
+  </style>
+
+</head>
+<body>
+  <div class="box-mapa">
+    <div class="mapa" id="mapa">
+      <img src="v3/Rota4mil.png" id="rota_mapa" />
+    </div>
+  </div>
+
+  <script src="rota/jspathfinding.js"></script>
+  <script src="rota/rota.js"></script>
+</body>
+</html>
